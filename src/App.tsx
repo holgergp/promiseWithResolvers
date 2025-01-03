@@ -24,14 +24,14 @@ function App() {
       </button>
       <ErrorBoundary fallback={<div>Promise rejected</div>}>
         <Suspense fallback={<div>Loading</div>}>
-          <PromiseResolver />
+          <ShowPromiseValue />
         </Suspense>
       </ErrorBoundary>
     </div>
   );
 }
 
-function PromiseResolver() {
+function ShowPromiseValue() {
   const value = use(promise);
   console.log("Test");
   return (
